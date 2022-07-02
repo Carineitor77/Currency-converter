@@ -1,0 +1,16 @@
+.bottom {
+    width: 100%;
+    border: 2px solid grey;
+}
+
+.clock{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.footer {
+    position: relative;
+}

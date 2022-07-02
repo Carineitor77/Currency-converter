@@ -1,0 +1,33 @@
+.input_value {
+    background-color: rgb(219, 240, 248);
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px
+}
+
+.value_1 {
+    background-color: rgb(236, 235, 235);
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px
+    
+}
+
+.value_2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px
+}
+
+.btn_style {
+    margin: 0 auto;
+    display: block;
+}
+
+.Invalid-value {
+    color: red;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 30px;
+}

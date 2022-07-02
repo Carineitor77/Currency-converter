@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react';
 import {Container} from 'react-bootstrap';
 
-import Service from './Service/Service';
-import './App.css';
+import Service from '../Service/Service';
+
+import './CurrencyConverter.css';
 
 const CurrencyConverter = () => {
     const service = new Service();
@@ -29,30 +30,22 @@ const CurrencyConverter = () => {
 
     return (
       <Container>
-        <input type="number" placeholder='UAH' onChange={(e) => onChangeUAH(e.target.value)}/>
+        <input type="number" placeholder='UAH' className='form-control mb-1 input_value' onChange={(e) => onChangeUAH(e.target.value)}/>
         <div>
           {UAH < 0 
             ? invalidValue 
             : сurrencies.map((item, i) => {
-                  return (
-                    <div key={i}>{item.cc}: {UAH / item.rate} ({item.txt})</div>
-                  )
+                return (
+                  <div key={i} className={i % 2 == 0 ? 'form-control value_1' : 'form-control value_2'}>{item.cc}: {UAH / item.rate} ({item.txt})</div>
+                )
               })
           }
         </div>
         <div>
-          <button onClick={updateCurrencies}>Update data</button>
+          <button onClick={updateCurrencies} className='btn btn-outline-success mt-3 btn_style'>Update data</button>
         </div>
       </Container>
     )
 }
 
-function App() {
-  return (
-    <>
-      <CurrencyConverter/>
-    </>
-  );
-}
-
-export default App;
+export default CurrencyConverter;
