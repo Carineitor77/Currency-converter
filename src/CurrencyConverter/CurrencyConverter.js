@@ -34,12 +34,13 @@ const CurrencyConverter = () => {
         <div>
           {UAH < 0 
             ? invalidValue 
-            : сurrencies.map((item, i) => {
-                return (
-                  <div key={i} className={i % 2 == 0 ? 'form-control value_1' : 'form-control value_2'}>{item.cc}: {UAH / item.rate} ({item.txt})</div>
-                )
-              })
-          }
+            : UAH != 0 
+            ? сurrencies.map((item, i) => {
+                  return (
+                    <div key={i} className={i % 2 == 0 ? 'form-control value_1' : 'form-control value_2'}>{item.cc}: {UAH / item.rate} ({item.txt})</div>
+                  )
+                })
+            : null}
         </div>
         <div>
           <button onClick={updateCurrencies} className='btn btn-outline-success mt-3 btn_style'>Update data</button>

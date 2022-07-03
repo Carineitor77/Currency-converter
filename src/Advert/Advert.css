@@ -1,0 +1,20 @@
+.advert{
+    color: white;
+    background-color: black;
+    text-align: center;
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    height: 80px;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.wrapper{
+    position: relative;
+}
+.btn-style{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

@@ -6,7 +6,7 @@ import bottom from '../Images/Bottom.jpg';
 import './Bottom.css';
 
 const Bottom = () => {
-    const [time, setTime] = useState(0);
+    const [time, setTime] = useState(null);
 
     useEffect(() => {
         setInterval(() => {
