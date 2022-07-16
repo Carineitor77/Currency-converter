@@ -10,7 +10,6 @@ const CurrencyConverter = () => {
     const [сurrencies, setCurrencies] = useState([]);
     const [UAH, setUAH] = useState(0);
     const [search, setSearch] = useState(null);
-    const [count, setCount] = useState(0);
     const invalidValue = <div className="Invalid-value">Invalid Value</div>
 
 
@@ -33,19 +32,6 @@ const CurrencyConverter = () => {
 
     function onUpdateSearch(value) {
       setSearch(search => value.toLowerCase());
-    }
-
-    function updateCount(value) {
-      switch(value) {
-        case 1: 
-          setCount(count => count + value);
-          break;
-        case 0:
-          setCount(count => 0);
-          break;
-        default:
-          throw new Error('Invalid argument value');
-      }
     }
 
     const content = UAH < 0 
