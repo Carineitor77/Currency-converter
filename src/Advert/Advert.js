@@ -16,15 +16,15 @@ const Advert = () => {
         </div>
     )
 
-    async function ClosedWindow(time) {
+    function ClosedWindow(time) {
         let t = time / 1000;
         ChangeTimer(t);
-        const timeId = await setInterval(() => {
+        const timeId = setInterval(() => {
             t--;
             ChangeTimer(t);
         }, 1000);
         
-        await setTimeout(() => {
+        setTimeout(() => {
             ChangeClosed();
             clearInterval(timeId);
         }, time);

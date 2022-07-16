@@ -19,6 +19,13 @@
     width: 500px
 }
 
+.search-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    border-color: rgb(6, 230, 6);
+}
+
 .btn_style {
     margin: 0 auto;
     display: block;
